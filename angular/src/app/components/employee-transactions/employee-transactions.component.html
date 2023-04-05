@@ -1,0 +1,41 @@
+<div class="app-component-div">
+    Employee ID:
+    <input type="number" #employeeId placeholder="Employee ID" />
+    <button class="submit-button" (click)="filterEmployeeTransactions(employeeId.value)">Find Transactions</button>
+</div>
+<div class="app-component-div">
+    <table *ngIf="employee" class="table">
+        <thead class="thead-dark">
+            <th>Employee ID</th>
+            <th>Employee Name</th>
+            <th>City</th>
+            <th>Date of Birth</th>
+        </thead>
+        <tbody>
+            <tr *ngIf="employee">
+                <td>{{ employee.empId }}</td>
+                <td>{{ employee.empName }}</td>
+                <td>{{ employee.cityId }}</td>
+                <td>{{ employee.empDOB }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="app-component-div">
+    <table *ngIf="filtered" class="table">
+        <thead class="thead-dark">
+            <th>Transaction ID</th>
+            <th>Employee ID</th>
+            <th>Transaction Date</th>
+            <th>Transaction Remarks</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employeeTransaction of filteredEmployeeTransactions">
+                <td>{{ employeeTransaction.tranId }}</td>
+                <td>{{ employeeTransaction.empId }}</td>
+                <td>{{ employeeTransaction.tranDt }}</td>
+                <td>{{ employeeTransaction.tranRemarks }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

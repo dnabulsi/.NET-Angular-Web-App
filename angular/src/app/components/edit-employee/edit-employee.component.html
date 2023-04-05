@@ -1,0 +1,16 @@
+<div class="employee-edit-container" *ngIf="employee">
+    <div>
+        Name:
+        <input [(ngModel)]="employee.empName" placeholder="Name" />
+    </div>
+    <div>
+        City ID:
+        <input type="number" [(ngModel)]="employee.cityId" placeholder="City ID" />
+    </div>
+    <div>
+        Date of Birth:
+        <input type="date" [(ngModel)]="employee.empDOB" placeholder="Date of Birth">
+    </div>
+    <button (click)="updateEmployee(employee)" *ngIf="employee.empId">Save Changes</button>
+    <button (click)="createEmployee(employee)" *ngIf="!employee.empId">Create Employee</button>
+</div>

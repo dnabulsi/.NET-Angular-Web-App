@@ -1,0 +1,24 @@
+<div class="create-employee-button app-component-div">
+  <button onclick="this. style.display='none'" (click)="initNewEmployee()">Create New Employee</button>
+  <app-edit-employee [employee]="employeeToEdit" (employeesUpdated)="updateEmployeeList($event)"></app-edit-employee>
+</div>
+<div class="app-component-div">
+  <table class="table">
+    <thead class="thead-dark">
+      <th>Employee ID</th>
+      <th>Employee Name</th>
+      <th>City</th>
+      <th>Date of Birth</th>
+      <th></th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.empId }}</td>
+        <td>{{ employee.empName }}</td>
+        <td>{{ employee.cityId }}</td>
+        <td>{{ employee.empDOB }}</td>
+        <td><button class="edit" (click)="editEmployee(employee)">Edit</button><button (click)="deleteEmployee(employee)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

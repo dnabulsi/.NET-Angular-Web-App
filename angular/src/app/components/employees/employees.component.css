@@ -1,0 +1,16 @@
+.app-component-div {
+    display: flex;
+    /* Use flexbox layout */
+    justify-content: center;
+    /* Center contents horizontally */
+    align-items: center;
+    /* Center contents vertically */
+}
+
+.create-employee-button {
+    margin-bottom: 20px;
+}
+
+.edit {
+    margin-right: 30px;
+}

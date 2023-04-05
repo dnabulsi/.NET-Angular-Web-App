@@ -1,0 +1,13 @@
+.employee-edit-container {
+    display: flex;
+    /* Use flexbox layout */
+    justify-content: center;
+    /* Center contents horizontally */
+    align-items: center;
+    /* Center contents vertically */
+}
+
+div {
+    margin-left: 10px;
+    margin-right: 10px;
+}
